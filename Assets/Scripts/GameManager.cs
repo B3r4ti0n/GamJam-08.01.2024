@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public float m_speed;
     public int m_number_block;
     
+    
     // Start is called before the first frame update
     void Start()
     {

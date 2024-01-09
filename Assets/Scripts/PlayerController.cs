@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
 
             Rigidbody rigBod = instance.GetComponent<Rigidbody>();
 
-            rigBod.AddForce(m_Canon.forward * 500, ForceMode.Impulse);
+            rigBod.AddForce(m_Canon.forward * 300, ForceMode.Impulse);
 
             Destroy(instance, 6);
 

@@ -48,8 +48,7 @@ public class GameManager : MonoBehaviour
 
     void UpdateSpeedAndInterval()
     {
-        Debug.Log($"{Settings.blocksSpawned % 10} , {Settings.speed_block}");
-        if (Settings.blocksSpawned % 10 == 0)
+        if (Settings.blocksSpawned % Settings.number_block_max == 0)
         {
             Settings.speed_block += 1f;
             CalculateSpawnInterval();

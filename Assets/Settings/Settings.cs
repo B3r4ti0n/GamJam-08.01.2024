@@ -13,4 +13,5 @@ public class Settings : MonoBehaviour
     public static float spawnInterval = 0f;
     public static int blocksSpawned = 0;
     public static float initialSpeed = 5;
+    public static int number_block_max = 10;
 }

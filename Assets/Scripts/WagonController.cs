@@ -14,6 +14,9 @@ public class WagonController : MonoBehaviour
     private bool _IsCentered;
     private bool _IsFallOverLeft;
 
+    [SerializeField]
+    private GameObject m_Player;
+
     #endregion
 
     // Start is called before the first frame update
@@ -25,44 +28,61 @@ public class WagonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         #region Switch to the sides
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Settings._isAlive)
         {
-            // Switch to the left side
-            if (_IsCentered)
+            if (Input.GetKey(KeyCode.LeftArrow))
             {
-                m_RotateLeftPoint.transform.Rotate(0.0f, 0.0f, 20.0f, Space.Self);
-                _IsCentered = false;
-                _IsFallOverLeft = true;
-            }
-        }
-        else if (Input.GetKey(KeyCode.RightArrow))
-        {
-            // Switch to the right side
-            if (_IsCentered)
-            {
-                m_RotateRightPoint.transform.Rotate(0.0f, 0.0f, -20.0f, Space.Self);
-                _IsFallOverLeft = false;
-                _IsCentered = false;
-            }
-        }
-        else
-        {
-            // Back to center
-            if (!_IsCentered)
-            {
-                if (!_IsFallOverLeft)
+                // Switch to the left side
+                if (_IsCentered)
                 {
-                    m_RotateRightPoint.transform.Rotate(0.0f, 0.0f, 20.0f, Space.Self);
-                } else
-                {
-                    m_RotateLeftPoint.transform.Rotate(0.0f, 0.0f, -20.0f, Space.Self);
+                    m_RotateLeftPoint.transform.Rotate(0.0f, 0.0f, 20.0f, Space.Self);
+                    _IsCentered = false;
+                    _IsFallOverLeft = true;
                 }
             }
-            _IsCentered = true;
+            else if (Input.GetKey(KeyCode.RightArrow))
+            {
+                // Switch to the right side
+                if (_IsCentered)
+                {
+                    m_RotateRightPoint.transform.Rotate(0.0f, 0.0f, -20.0f, Space.Self);
+                    _IsFallOverLeft = false;
+                    _IsCentered = false;
+                }
+            }
+            else
+            {
+                // Back to center
+                if (!_IsCentered)
+                {
+                    if (!_IsFallOverLeft)
+                    {
+                        m_RotateRightPoint.transform.Rotate(0.0f, 0.0f, 20.0f, Space.Self);
+                    }
+                    else
+                    {
+                        m_RotateLeftPoint.transform.Rotate(0.0f, 0.0f, -20.0f, Space.Self);
+                    }
+                }
+                _IsCentered = true;
 
+            }
         }
         #endregion
+    }
 
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Trap"))
+        {
+            Settings._isAlive = false;
+        }
+
+        else if (other.gameObject.CompareTag("Munitions"))
+        {
+            m_Player.GetComponent<PlayerController>().Reload();
+        }
     }
 }

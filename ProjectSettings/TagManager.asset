@@ -7,6 +7,8 @@ TagManager:
   - Target
   - GameManager
   - Ammo
+  - Trap
+  - Munitions
   layers:
   - Default
   - TransparentFX

@@ -17,9 +17,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject m_RotatePoint;
 
-    private float _fireRate = 0.5f;
+    private float _FireRate;
 
-    private float _lastBulletSpawn;
+    private float _LastBulletSpawn;
+
+    [SerializeField]
+    private int _Ammunition;
+
+    [SerializeField]
+    private Animator m_Animator;
 
     #endregion
 
@@ -27,27 +33,33 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _IsDown = false;
+        _FireRate = 0.5f;
+        _Ammunition = 20;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Settings._isAlive)
+        {
+
         #region Squat and Get Up
         if (Input.GetKey(KeyCode.DownArrow))
         {
             if (!_IsDown)
             {
                 // Start squat animation
-                transform.position = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z);
+                m_Animator.SetBool("IsCrouching", true);
             }
             _IsDown = true;
         }
         else
         {
+                Debug.Log("test");
             if (_IsDown)
             {
                 // Get up
-                transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+                m_Animator.SetBool("IsCrouching", false);
             }
             _IsDown = false;
         }
@@ -66,16 +78,22 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Mouse0))
         {
-             Fire();
+            if (_Ammunition > 0)
+            {
+                Fire();
+            }
         }
 
         #endregion
+        }
+
     }
 
     private void Fire()
     {
-        if (Time.time > _fireRate + _lastBulletSpawn)
+        if (Time.time > _FireRate + _LastBulletSpawn)
         {
+            // Fire animation
             GameObject instance = Instantiate(m_Bullet, m_Canon.position, m_Canon.rotation);
 
             Rigidbody rigBod = instance.GetComponent<Rigidbody>();
@@ -84,7 +102,32 @@ public class PlayerController : MonoBehaviour
 
             Destroy(instance, 1);
 
-            _lastBulletSpawn = Time.time;
+            _LastBulletSpawn = Time.time;
+
+            _Ammunition--;
+            // Play animation ammunition bar decreasing
+        }
+    }
+
+    public void Reload()
+    {
+        if (_Ammunition <= 15)
+        {
+            // Play animation ammunition bar increasing
+            _Ammunition += 5;
+        } else
+        {
+            _Ammunition = 20;
+        }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Trap"))
+        {
+            Settings._isAlive = false;
+
+            // Show Game Over Canvas 
         }
     }
 }

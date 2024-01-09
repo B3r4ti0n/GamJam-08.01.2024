@@ -9,26 +9,19 @@ public class TargetScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetGameManager();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        GetGameManager();
+        
     }
 
     private void OnTriggerEnter(Collider other) {
-        Debug.Log(gameManager.m_Score);
+        Debug.Log(Settings.score);
         if (other.CompareTag("Ammo")){
-            gameManager.m_Score+=1;
-        }
-    }
-
-    private void GetGameManager(){
-        gameManagerObject = GameObject.FindWithTag("GameManager");
-        if (gameManagerObject != null){
-            gameManager = gameManagerObject.GetComponent<GameManager>();
+            Settings.score+=1;
         }
     }
 }

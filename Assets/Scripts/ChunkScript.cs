@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChunkScript : MonoBehaviour
 {
-    public float speed = 5f;
+    public float speed = Settings.speed_block;
 
     [SerializeField] 
     private List<Mesh> list_mesh;

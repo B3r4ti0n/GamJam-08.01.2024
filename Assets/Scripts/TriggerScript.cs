@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TargetScript : MonoBehaviour
+public class TriggerScript : MonoBehaviour
 {
-    [SerializeField] 
-    private GameObject trigger;
-
+    // Start is called before the first frame update
     void Start()
     {
         
@@ -19,9 +17,9 @@ public class TargetScript : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Ammo")){
-            Settings._isActivated = true;
-            trigger.SetActive(false);
+        if(other.CompareTag("Player")){
+            Debug.Log("Désactiver");
+            Settings._isAlive = false;
         }
     }
 }

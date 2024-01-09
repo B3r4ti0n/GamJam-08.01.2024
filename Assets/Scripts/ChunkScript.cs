@@ -5,25 +5,44 @@ using UnityEngine;
 public class ChunkScript : MonoBehaviour
 {
     public float speed = Settings.speed_block;
-
     [SerializeField] 
+    private GameObject rail;
+    [SerializeField] 
+    private GameObject target;
+    [SerializeField] 
+    private GameObject trigger;
+    [SerializeField]
     private List<Mesh> list_mesh;
+    [SerializeField] 
+    private  List<Mesh> list_mesh_rail;
     private MeshFilter meshFilter;
+    private MeshFilter meshFilter_rail;
 
     void Start()
     {
         meshFilter = GetComponent<MeshFilter>();
         meshFilter.mesh = list_mesh[Random.Range(0, list_mesh.Count)];
+
+        int random = Random.Range(0, list_mesh_rail.Count);
+        meshFilter_rail = rail.GetComponent<MeshFilter>();
+        meshFilter_rail.mesh = list_mesh_rail[random];
+        if (random == 1){
+            target.SetActive(true);
+            trigger.SetActive(true);
+        }
+        
     }
 
     void Update()
     {
-        speed = Settings.speed_block;
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        if(Settings._isAlive){
+            speed = Settings.speed_block;
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        }
     }
 
     private void OnTriggerExit(Collider other) {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && Settings._isAlive)
         {
             StartCoroutine(DelayedAction());
         }
@@ -31,7 +50,7 @@ public class ChunkScript : MonoBehaviour
 
     IEnumerator DelayedAction()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
 }

@@ -233,7 +233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6036846655270933498, guid: 9f828830fab2049e0a02d429a2dcf031, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.827
+      value: 11.4
       objectReference: {fileID: 0}
     - target: {fileID: 6036846655270933498, guid: 9f828830fab2049e0a02d429a2dcf031, type: 3}
       propertyPath: m_LocalPosition.y
@@ -241,7 +241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6036846655270933498, guid: 9f828830fab2049e0a02d429a2dcf031, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 11.12
       objectReference: {fileID: 0}
     - target: {fileID: 6036846655270933498, guid: 9f828830fab2049e0a02d429a2dcf031, type: 3}
       propertyPath: m_LocalRotation.w
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 694155886}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Ammo
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -379,8 +379,8 @@ Transform:
   m_GameObject: {fileID: 694155881}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.199, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -444,6 +444,8 @@ MonoBehaviour:
   m_Score: 0
   m_speed: 0
   m_number_block: 0
+  shunkInstantiate: {fileID: 3039936107677712326, guid: 51d6b7b977c35436492c4584b13a983f, type: 3}
+  startTime: 0
 --- !u!4 &1279692739
 Transform:
   m_ObjectHideFlags: 0

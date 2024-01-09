@@ -6,8 +6,11 @@ public class Settings : MonoBehaviour
 {
     public static float startTime = 0;
     public static int score = 0;
-    public static float speed_game = 2;
+    public static float speed_game = 1;
     public static float speed_block = 5;
     public static float width_block = 5;
     public static bool _isAlive = true;
+    public static float spawnInterval = 0f;
+    public static int blocksSpawned = 0;
+    public static float initialSpeed = 5;
 }

@@ -18,6 +18,7 @@ public class ChunkScript : MonoBehaviour
 
     void Update()
     {
+        speed = Settings.speed_block;
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 

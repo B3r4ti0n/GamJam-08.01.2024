@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
 
             rigBod.AddForce(m_Canon.forward * 500, ForceMode.Impulse);
 
-            Destroy(instance, 1);
+            Destroy(instance, 6);
 
             _LastBulletSpawn = Time.time;
 

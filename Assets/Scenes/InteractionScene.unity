@@ -442,9 +442,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Score: 0
-  m_speed: 0
+  m_speed_game: 1
+  m_speed_block: 5
+  m_width_block: 5
   m_number_block: 0
-  shunkInstantiate: {fileID: 3039936107677712326, guid: 51d6b7b977c35436492c4584b13a983f, type: 3}
+  ChunkInstantiate: {fileID: 3039936107677712326, guid: 51d6b7b977c35436492c4584b13a983f, type: 3}
   startTime: 0
 --- !u!4 &1279692739
 Transform:

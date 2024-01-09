@@ -22,7 +22,9 @@ public class GameManager : MonoBehaviour
         if(Settings._isAlive && IsSpawnTime())
         {
             SpawnChunk();
-            UpdateSpeedAndInterval();
+            if(Settings.speed_block <= 15f){
+                UpdateSpeedAndInterval();
+            }
         }
     }
 

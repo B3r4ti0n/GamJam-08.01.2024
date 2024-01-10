@@ -27,6 +27,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Animator m_Animator;
 
+    [SerializeField]
+    private GameManager m_GameManager;
+
+    [SerializeField]
+    private GameObject m_GameOverScreen;
+
     #endregion
 
     // Start is called before the first frame update
@@ -124,9 +130,17 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Trap"))
         {
+            Debug.Log(other);
             Settings._isAlive = false;
 
-            // Show Game Over Canvas 
+            // Show Game Over Canvas
+
+            //m_GameManager.ShowGameOverScreen();
+
+            m_GameOverScreen.SetActive(true);
         }
     }
+
 }
+
+

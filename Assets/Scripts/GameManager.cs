@@ -6,7 +6,10 @@ public class GameManager : MonoBehaviour
 {
     public int m_number_block;
     public ChunkScript ChunkInstantiate;
-    
+
+    [SerializeField]
+    private GameObject m_GameOverScreen;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,4 +57,10 @@ public class GameManager : MonoBehaviour
             CalculateSpawnInterval();
         }
     }
+    public void ShowGameOverScreen()
+    {
+        //TODO : Show Game Over screen
+        m_GameOverScreen.SetActive(true);
+    }
+
 }

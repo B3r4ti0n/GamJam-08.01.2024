@@ -1,0 +1,159 @@
+fileFormatVersion: 2
+guid: 011081dc83f9747fabf11282e765b77c
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.75
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 1
+    maxBonesPerVertex: 1
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: ourson(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ours chapeau
+      parentName: ourson(Clone)
+      position: {x: 0.015896827, y: 0.658011, z: -0.10390058}
+      rotation: {x: -0.7070652, y: 0.007676835, z: -0.007676834, w: 0.707065}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ours corps
+      parentName: ourson(Clone)
+      position: {x: -0.008386731, y: -0.33888617, z: -0.08705506}
+      rotation: {x: 0.999677, y: -0.017720921, z: -0.01821576, w: -0.00032259058}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: ours queue
+      parentName: ourson(Clone)
+      position: {x: -0.00720495, y: -0.28016582, z: -0.35887685}
+      rotation: {x: -0.1183055, y: 0.032069344, z: -0.014001392, w: 0.9923605}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: ours tete
+      parentName: ourson(Clone)
+      position: {x: 0.0071175992, y: 0.33773655, z: -0.106939055}
+      rotation: {x: 0.012881506, y: 0.72669, z: -0.012173335, w: 0.6867369}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: pate bras g
+      parentName: ourson(Clone)
+      position: {x: 0.36439195, y: -0.022718534, z: -0.12688568}
+      rotation: {x: 0.07069027, y: 0.9973319, z: -0.0006433061, w: -0.018207116}
+      scale: {x: 1, y: 0.99999976, z: 0.99999994}
+    - name: pate g
+      parentName: ourson(Clone)
+      position: {x: 0.19629805, y: -0.47854662, z: -0.12716955}
+      rotation: {x: 0.6249113, y: 0.78048325, z: -0.010875807, w: -0.014616327}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
+    - name: ours echarpe
+      parentName: ourson(Clone)
+      position: {x: -0.002452433, y: 0.116494454, z: -0.09728841}
+      rotation: {x: -0.6806309, y: 0.0072817323, z: -0.01399696, w: 0.73245656}
+      scale: {x: 0.9999999, y: 0.99999994, z: 1}
+    - name: pate bras g.001
+      parentName: ourson(Clone)
+      position: {x: -0.36656785, y: -0.03962356, z: -0.09270298}
+      rotation: {x: 0.00064338226, y: 0.018207097, z: 0.07069043, w: 0.9973319}
+      scale: {x: 1, y: 0.9999998, z: 0.99999994}
+    - name: pate g.001
+      parentName: ourson(Clone)
+      position: {x: -0.21691409, y: -0.4824257, z: -0.10994077}
+      rotation: {x: 0.8368398, y: 0.5471446, z: -0.005784888, w: -0.017275885}
+      scale: {x: 0.99999994, y: 1, z: 0.9999999}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.75
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

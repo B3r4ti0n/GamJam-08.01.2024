@@ -9,6 +9,7 @@ TagManager:
   - Ammo
   - Trap
   - Munitions
+  - Wall
   layers:
   - Default
   - TransparentFX

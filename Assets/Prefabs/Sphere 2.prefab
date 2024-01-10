@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 637170889965358870}
   - component: {fileID: 5826686821432525160}
   - component: {fileID: 8262181194993536913}
+  - component: {fileID: 4813846748399750921}
   m_Layer: 0
   m_Name: Sphere 2
   m_TagString: Ammo
@@ -133,3 +134,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4813846748399750921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5108408058610181536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61eee800d5c842f2aa3c41118d4ce42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

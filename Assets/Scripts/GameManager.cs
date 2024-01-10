@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 
     void SpawnChunk()
     {
-        Instantiate(ChunkInstantiate, new Vector3(0, 0, -35), transform.rotation);
+        Instantiate(ChunkInstantiate, new Vector3(0, 0, -45), transform.rotation);
         Settings.startTime = Time.time;
         Settings.blocksSpawned++;
     }

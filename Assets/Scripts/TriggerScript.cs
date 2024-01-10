@@ -18,6 +18,7 @@ public class TriggerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if(other.CompareTag("Player")){
+            Settings._isActivated = true;
             Settings._isAlive = false;
         }
     }

@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class MonsterPanelScript : MonoBehaviour
 {
-
-    [SerializeField]
-    private GameObject m_MonsterPrefab;
-
+    #region Variables
     [SerializeField]
     private Transform m_MonsterPosition;
 
     [SerializeField]
+    private GameObject m_MonsterPositionGameObject;
+
+    [SerializeField]
     private List<GameObject> m_MonsterPrefabList;
+
+    [SerializeField]
+    private GameObject m_RotatePoint;
+    #endregion
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +27,11 @@ public class MonsterPanelScript : MonoBehaviour
 
             GameObject randGameObject = m_MonsterPrefabList[rand];
 
-            Instantiate(randGameObject, m_MonsterPosition.position, m_MonsterPosition.rotation);
+            var monster = Instantiate(randGameObject, m_MonsterPosition.position, m_MonsterPosition.rotation);
+
+            monster.transform.parent = m_MonsterPositionGameObject.transform;
+
+            randGameObject.GetComponent<MonsterScript>().GetRotatePoint(m_RotatePoint);
         }
     }
 
@@ -30,13 +39,5 @@ public class MonsterPanelScript : MonoBehaviour
     void Update()
     {
         
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Ammo"))
-        {
-            Debug.Log("+1 pts");
-        }
     }
 }

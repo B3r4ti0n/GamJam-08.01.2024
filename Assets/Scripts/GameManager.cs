@@ -6,13 +6,22 @@ public class GameManager : MonoBehaviour
 {
     public int m_number_block;
     public ChunkScript ChunkInstantiate;
+    public int m_count = 0;
 
     [SerializeField]
     private GameObject m_GameOverScreen;
 
+    [SerializeField] 
+    private GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
+        for (int i = 0; i <= 45; i+=5)
+        {
+            SpawnChunk(-i);
+        }
+
         Settings.startTime = Time.time;
         CalculateSpawnInterval();
         Settings.initialSpeed = Settings.speed_block;
@@ -24,10 +33,21 @@ public class GameManager : MonoBehaviour
     {
         if(Settings._isAlive && IsSpawnTime())
         {
-            SpawnChunk();
+            SpawnChunk(-45);
             if(Settings.speed_block <= 15f){
                 UpdateSpeedAndInterval();
             }
+        }else if(Settings._isActivated) {
+            m_count++;
+            player.transform.Rotate(0f, -0.7f, 0f);
+
+            player.transform.Translate(Vector3.forward * 5 * Time.deltaTime);
+
+            if(m_count >= 100){
+                Settings._isActivated = false;
+            }
+        } else {
+            
         }
     }
 
@@ -37,9 +57,9 @@ public class GameManager : MonoBehaviour
         return elapsedTime >= Settings.spawnInterval;
     }
 
-    void SpawnChunk()
+    void SpawnChunk(int z)
     {
-        Instantiate(ChunkInstantiate, new Vector3(0, 0, -45), transform.rotation);
+        Instantiate(ChunkInstantiate, new Vector3(0, 0, z), transform.rotation);
         Settings.startTime = Time.time;
         Settings.blocksSpawned++;
     }

@@ -25,6 +25,9 @@ public class ChunkScript : MonoBehaviour
         tunnel.transform.localScale = new Vector3(1f, 1f, 0.7f);
 
         int random = Random.Range(0, 100);
+        if(transform.position.z > -45){
+            random = 0;
+        }
         switch (random)
         {
             case >95:
@@ -38,7 +41,7 @@ public class ChunkScript : MonoBehaviour
         railPrefab = list_rail[random];
         GameObject rail = Instantiate(railPrefab, Vector3.zero, Quaternion.identity, transform);
         rail.transform.localPosition = new Vector3(0f, -0.5f, 0f);
-        rail.transform.localScale = new Vector3(0.2f, 0.2f, 1f);
+        rail.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         if (random == 1){
             target.SetActive(true);
             trigger.SetActive(true);

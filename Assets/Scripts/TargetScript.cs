@@ -6,7 +6,12 @@ public class TargetScript : MonoBehaviour
 {
     [SerializeField] 
     private GameObject trigger;
-
+    [SerializeField] 
+    private TriggerScript triggerScript;
+    [SerializeField] 
+    private GameObject door1;
+    [SerializeField] 
+    private GameObject door2;
     void Start()
     {
         
@@ -20,7 +25,6 @@ public class TargetScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Ammo")){
-            Settings._isActivated = true;
             trigger.SetActive(false);
         }
     }

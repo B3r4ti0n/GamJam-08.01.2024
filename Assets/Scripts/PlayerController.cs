@@ -55,7 +55,6 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-                Debug.Log("test");
             if (_IsDown)
             {
                 // Get up

@@ -27,11 +27,11 @@ public class MonsterPanelScript : MonoBehaviour
 
             GameObject randGameObject = m_MonsterPrefabList[rand];
 
-            var monster = Instantiate(randGameObject, m_MonsterPosition.position, m_MonsterPosition.rotation);
+            var monster = Instantiate(randGameObject, m_MonsterPosition.position, randGameObject.transform.rotation);
+
+            MonsterScript.m_RotatePoint = m_RotatePoint;
 
             monster.transform.parent = m_MonsterPositionGameObject.transform;
-
-            randGameObject.GetComponent<MonsterScript>().GetRotatePoint(m_RotatePoint);
         }
     }
 

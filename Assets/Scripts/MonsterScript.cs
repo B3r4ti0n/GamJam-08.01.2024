@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class MonsterScript : MonoBehaviour
 {
-
-    [SerializeField]
-    private GameObject m_RotatePoint;
+    public static GameObject m_RotatePoint;
 
     private bool _CanBeActivated;
 
@@ -28,7 +26,7 @@ public class MonsterScript : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Ammo"))
             {
-                m_RotatePoint.transform.Rotate(0.0f, 90.0f, 0.0f, Space.Self);
+                m_RotatePoint.transform.Rotate(0.0f, -90.0f, 0.0f, Space.Self);
                 _CanBeActivated = false;
                 Settings.score++;
                 Debug.Log("score : " + Settings.score + " pts.");
@@ -36,8 +34,4 @@ public class MonsterScript : MonoBehaviour
         }
     }
 
-    public void GetRotatePoint(GameObject rotatePoint)
-    {
-        m_RotatePoint = rotatePoint;
-    }
 }

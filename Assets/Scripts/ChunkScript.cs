@@ -50,7 +50,7 @@ public class ChunkScript : MonoBehaviour
         }
 
         GameObject enemy = Instantiate(EnemySign, Vector3.zero, Quaternion.identity, transform);
-        enemy.transform.localPosition = new Vector3(0f, -1f, 0f);
+        enemy.transform.localPosition = new Vector3(2.41f, -0.1f, 0f);
         //enemy.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         
     }

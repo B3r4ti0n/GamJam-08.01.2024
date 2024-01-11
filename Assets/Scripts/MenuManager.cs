@@ -30,6 +30,11 @@ public class MenuManager : MonoBehaviour
 
     }
 
+    public void ReloadGame()
+    {
+        SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
+    }
+
     public void LoadMenu()
     {
         SceneManager.LoadScene("MenuScene 1", LoadSceneMode.Single);

@@ -279,4 +279,10 @@ MonoBehaviour:
   m_MonsterPositionGameObject: {fileID: 7440973963452013648}
   m_MonsterPrefabList:
   - {fileID: 331242538319106412, guid: e8bb3d6481d69455e97ff2cd0d6e4150, type: 3}
+  - {fileID: 4155470706164315657, guid: 38992ea735568448382b0e24669ba170, type: 3}
+  - {fileID: 7199150863290967465, guid: b62f6c24d51f242689eba9f7fe92db02, type: 3}
+  - {fileID: 4589947062493011973, guid: 06a26d92332aa4423976622e9ddd8f56, type: 3}
+  - {fileID: 579103357491481152, guid: 2d50ba9263d7c4bb4858245ba94985cb, type: 3}
+  - {fileID: 3450338640333859181, guid: c57539c40e9ee42bd973f3cfa04bd89b, type: 3}
+  - {fileID: 2194171894343755610, guid: 8a1ebb37757104a7f901fbf110e969d1, type: 3}
   m_RotatePoint: {fileID: 7246169644131290486}

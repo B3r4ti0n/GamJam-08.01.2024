@@ -40,12 +40,18 @@ public class PlayerController : MonoBehaviour
     {
         _IsDown = false;
         _FireRate = 0.5f;
-        _Ammunition = 20;
+        _Ammunition = 10;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Settings._isAlive = false;
+        }
+
         if (Settings._isAlive)
         {
 
@@ -133,10 +139,11 @@ public class PlayerController : MonoBehaviour
             Settings._isAlive = false;
 
             // Show Game Over Canvas
-
-            //m_GameManager.ShowGameOverScreen();
-
-            m_GameOverScreen.SetActive(true);
+            //m_GameOverScreen.SetActive(true);
+        }
+        else if (other.gameObject.CompareTag("Munitions"))
+        {
+            Reload();
         }
     }
 

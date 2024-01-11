@@ -15,6 +15,9 @@ public class WagonController : MonoBehaviour
     private bool _IsFallOverLeft;
 
     [SerializeField]
+    private GameManager m_GameManager;
+
+    [SerializeField]
     private GameObject m_Player;
 
     #endregion
@@ -77,7 +80,10 @@ public class WagonController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Trap"))
         {
+            Debug.Log("ddd");
+
             Settings._isAlive = false;
+
         }
 
         else if (other.gameObject.CompareTag("Munitions"))

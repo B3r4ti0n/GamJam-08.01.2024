@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,11 +27,17 @@ public class GameManager : MonoBehaviour
         CalculateSpawnInterval();
         Settings.initialSpeed = Settings.speed_block;
         Settings.blocksSpawned = 0;
+        Settings._isAlive = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (!Settings._isAlive)
+        {
+            ShowGameOverScreen();
+        }
         if(Settings._isAlive && IsSpawnTime())
         {
             SpawnChunk(-45);
@@ -77,10 +84,12 @@ public class GameManager : MonoBehaviour
             CalculateSpawnInterval();
         }
     }
-    public void ShowGameOverScreen()
+
+    private void ShowGameOverScreen()
     {
         //TODO : Show Game Over screen
-        m_GameOverScreen.SetActive(true);
+        // m_GameOverScreen.SetActive(true);
+        SceneManager.LoadScene("GameOverScene", LoadSceneMode.Single);
     }
 
 }

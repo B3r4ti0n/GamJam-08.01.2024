@@ -36,7 +36,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.75
+    globalScale: 0.7
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -91,47 +91,47 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: ours chapeau
       parentName: ourson(Clone)
-      position: {x: 0.015896827, y: 0.658011, z: -0.10390058}
+      position: {x: 0.00014837038, y: 0.0061414363, z: -0.00096973876}
       rotation: {x: -0.7070652, y: 0.007676835, z: -0.007676834, w: 0.707065}
       scale: {x: 1, y: 1, z: 1}
     - name: ours corps
       parentName: ourson(Clone)
-      position: {x: -0.008386731, y: -0.33888617, z: -0.08705506}
+      position: {x: -0.000078276156, y: -0.0031629375, z: -0.00081251387}
       rotation: {x: 0.999677, y: -0.017720921, z: -0.01821576, w: -0.00032259058}
       scale: {x: 1, y: 1, z: 0.99999994}
     - name: ours queue
       parentName: ourson(Clone)
-      position: {x: -0.00720495, y: -0.28016582, z: -0.35887685}
+      position: {x: -0.0000672462, y: -0.002614881, z: -0.003349517}
       rotation: {x: -0.1183055, y: 0.032069344, z: -0.014001392, w: 0.9923605}
       scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
     - name: ours tete
       parentName: ourson(Clone)
-      position: {x: 0.0071175992, y: 0.33773655, z: -0.106939055}
+      position: {x: 0.00006643093, y: 0.0031522077, z: -0.0009980978}
       rotation: {x: 0.012881506, y: 0.72669, z: -0.012173335, w: 0.6867369}
       scale: {x: 1, y: 0.99999994, z: 0.99999994}
     - name: pate bras g
       parentName: ourson(Clone)
-      position: {x: 0.36439195, y: -0.022718534, z: -0.12688568}
+      position: {x: 0.0034009914, y: -0.00021203965, z: -0.0011842664}
       rotation: {x: 0.07069027, y: 0.9973319, z: -0.0006433061, w: -0.018207116}
       scale: {x: 1, y: 0.99999976, z: 0.99999994}
     - name: pate g
       parentName: ourson(Clone)
-      position: {x: 0.19629805, y: -0.47854662, z: -0.12716955}
+      position: {x: 0.001832115, y: -0.004466435, z: -0.0011869158}
       rotation: {x: 0.6249113, y: 0.78048325, z: -0.010875807, w: -0.014616327}
       scale: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
     - name: ours echarpe
       parentName: ourson(Clone)
-      position: {x: -0.002452433, y: 0.116494454, z: -0.09728841}
+      position: {x: -0.000022889375, y: 0.0010872815, z: -0.00090802513}
       rotation: {x: -0.6806309, y: 0.0072817323, z: -0.01399696, w: 0.73245656}
       scale: {x: 0.9999999, y: 0.99999994, z: 1}
     - name: pate bras g.001
       parentName: ourson(Clone)
-      position: {x: -0.36656785, y: -0.03962356, z: -0.09270298}
+      position: {x: -0.0034212999, y: -0.00036981987, z: -0.0008652278}
       rotation: {x: 0.00064338226, y: 0.018207097, z: 0.07069043, w: 0.9973319}
       scale: {x: 1, y: 0.9999998, z: 0.99999994}
     - name: pate g.001
       parentName: ourson(Clone)
-      position: {x: -0.21691409, y: -0.4824257, z: -0.10994077}
+      position: {x: -0.0020245314, y: -0.00450264, z: -0.0010261139}
       rotation: {x: 0.8368398, y: 0.5471446, z: -0.005784888, w: -0.017275885}
       scale: {x: 0.99999994, y: 1, z: 0.9999999}
     armTwist: 0.5
@@ -141,7 +141,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.75
+    globalScale: 0.0069999998
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1

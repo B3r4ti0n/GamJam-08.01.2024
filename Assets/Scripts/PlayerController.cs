@@ -47,11 +47,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Settings._isAlive = false;
-        }
-
         if (Settings._isAlive)
         {
 
@@ -61,8 +56,13 @@ public class PlayerController : MonoBehaviour
             if (!_IsDown)
             {
                 // Start squat animation
-                m_Animator.SetBool("IsCrouching", true);
-            }
+                // m_Animator.SetBool("IsCrouching", true);
+
+                // gameObject.transform.position = new Vector3(0, 0.1f, 0);
+
+                gameObject.transform.rotation = Quaternion.Euler(-55, -180, 0);
+
+                }
             _IsDown = true;
         }
         else
@@ -70,7 +70,11 @@ public class PlayerController : MonoBehaviour
             if (_IsDown)
             {
                 // Get up
-                m_Animator.SetBool("IsCrouching", false);
+                // m_Animator.SetBool("IsCrouching", false);
+
+                // gameObject.transform.position = new Vector3(0, -0.1f, 0);
+
+                gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
             }
             _IsDown = false;
         }

@@ -50,9 +50,14 @@ public class ChunkScript : MonoBehaviour
             trigger.SetActive(true);
         }
 
-        GameObject enemy = Instantiate(EnemySign, Vector3.zero, Quaternion.identity, transform);
-        enemy.transform.localPosition = new Vector3(2.41f, -0.1f, 0f);
-        //enemy.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        if(transform.position.z <= -45){
+            if (Random.Range(0, 100) >= 80)
+            {
+            GameObject enemy = Instantiate(EnemySign, Vector3.zero, Quaternion.identity, transform);
+            enemy.transform.localPosition = new Vector3(2.41f, -0.1f, 0f);
+            //enemy.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+            }
+        }
 
         if(transform.position.z <= -45){
             if (Random.Range(0, 100) >= 80)

@@ -130,7 +130,6 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Trap"))
         {
-            Debug.Log(other);
             Settings._isAlive = false;
 
             // Show Game Over Canvas

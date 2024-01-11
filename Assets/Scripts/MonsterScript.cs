@@ -44,7 +44,6 @@ public class MonsterScript : MonoBehaviour
                 m_RotatePoint.transform.Rotate(0.0f, -90.0f, 0.0f, Space.Self);
                 _CanBeActivated = false;
                 Settings.score++;
-                Debug.Log("score : " + Settings.score + " pts.");
             }
         }
     }

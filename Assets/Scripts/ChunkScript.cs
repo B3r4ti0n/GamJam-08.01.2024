@@ -74,6 +74,7 @@ public class ChunkScript : MonoBehaviour
                 
                 roc.transform.localPosition = new Vector3(position, -0.5f, 0f);
                 roc.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+                roc.transform.localRotation = Quaternion.Euler(0, 180, 0);
             }
         }
         

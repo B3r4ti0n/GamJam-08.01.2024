@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
     {
         _IsDown = false;
         _FireRate = 0.5f;
-        _Ammunition = 10;
+        _Ammunition = 200;
     }
 
     // Update is called once per frame
@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
 
             Rigidbody rigBod = instance.GetComponent<Rigidbody>();
 
-            rigBod.AddForce(m_Canon.forward * 300, ForceMode.Impulse);
+            rigBod.AddForce(m_Canon.forward * 150, ForceMode.Impulse);
 
             Destroy(instance, 6);
 

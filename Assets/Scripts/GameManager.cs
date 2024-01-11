@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Settings._isActivated = false;
         for (int i = 0; i <= 45; i+=5)
         {
             SpawnChunk(-i);
@@ -33,7 +34,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Settings._isAlive && Settings._isActivated){
+        if (!Settings._isAlive){
             StartCoroutine(DelayedAction());
         }
         if(Settings._isAlive && IsSpawnTime())

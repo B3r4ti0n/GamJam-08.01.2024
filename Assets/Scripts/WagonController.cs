@@ -80,8 +80,6 @@ public class WagonController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Trap"))
         {
-            Debug.Log("ddd");
-
             Settings._isAlive = false;
 
         }

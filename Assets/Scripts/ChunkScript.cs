@@ -18,7 +18,8 @@ public class ChunkScript : MonoBehaviour
     private GameObject tunnelPrefab;
     [SerializeField] 
     private GameObject EnemySign;
-
+    [SerializeField] 
+    private GameObject RocSign;
     void Start()
     {
         tunnelPrefab = list_tunnel[Random.Range(0, list_tunnel.Count)];
@@ -52,6 +53,24 @@ public class ChunkScript : MonoBehaviour
         GameObject enemy = Instantiate(EnemySign, Vector3.zero, Quaternion.identity, transform);
         enemy.transform.localPosition = new Vector3(0f, -1f, 0f);
         //enemy.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+
+        if(transform.position.z <= -45){
+            if (Random.Range(0, 100) >= 80)
+            {
+                GameObject roc = Instantiate(RocSign, Vector3.zero, Quaternion.identity, transform);
+                random = Random.Range(0, 100);
+                float position = 0f;
+                if (random < 50){
+                    position = -0.1f;
+                }else if (random >= 50)
+                {
+                    position = 0.1f;
+                }
+                
+                roc.transform.localPosition = new Vector3(position, -0.5f, 0f);
+                roc.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+            }
+        }
         
     }
 

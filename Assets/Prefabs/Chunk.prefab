@@ -599,6 +599,7 @@ MonoBehaviour:
   - {fileID: 2162869084419911803, guid: d6e1c284e639c4094812329a0231b5ed, type: 3}
   - {fileID: 2035243393139755878, guid: defddadfaef3f4e4f81b730ae897e8bc, type: 3}
   EnemySign: {fileID: 9082552682185337840, guid: aad734312d8b64c078a0d78f86f12117, type: 3}
+  RocSign: {fileID: 7787744942014809264, guid: 8be2ba62dd4b04142bc317068c2d5c35, type: 3}
 --- !u!1001 &1151061362487590874
 PrefabInstance:
   m_ObjectHideFlags: 0

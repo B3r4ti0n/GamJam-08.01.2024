@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Settings._isAlive && Settings._isActivated){
+        if (!Settings._isAlive){
             StartCoroutine(DelayedAction());
         }
         if(Settings._isAlive && IsSpawnTime())

@@ -16,6 +16,8 @@ public class ChunkScript : MonoBehaviour
     [SerializeField] 
     private  List<GameObject> list_rail;
     private GameObject tunnelPrefab;
+    [SerializeField] 
+    private GameObject EnemySign;
 
     void Start()
     {
@@ -46,6 +48,10 @@ public class ChunkScript : MonoBehaviour
             target.SetActive(true);
             trigger.SetActive(true);
         }
+
+        GameObject enemy = Instantiate(EnemySign, Vector3.zero, Quaternion.identity, transform);
+        enemy.transform.localPosition = new Vector3(0f, -1f, 0f);
+        //enemy.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         
     }
 

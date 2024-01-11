@@ -33,10 +33,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (!Settings._isAlive)
-        {
-            ShowGameOverScreen();
+        if (!Settings._isAlive && Settings._isActivated){
+            StartCoroutine(DelayedAction());
         }
         if(Settings._isAlive && IsSpawnTime())
         {
@@ -54,7 +52,7 @@ public class GameManager : MonoBehaviour
                 Settings._isActivated = false;
             }
         } else {
-            
+
         }
     }
 
@@ -90,6 +88,12 @@ public class GameManager : MonoBehaviour
         //TODO : Show Game Over screen
         // m_GameOverScreen.SetActive(true);
         SceneManager.LoadScene("GameOverScene", LoadSceneMode.Single);
+    }
+
+    IEnumerator DelayedAction()
+    {
+        yield return new WaitForSeconds(1f);
+        ShowGameOverScreen();
     }
 
 }
